@@ -59,9 +59,9 @@
 </head>
 <body>
 
-<div class="preloader">
+<!-- <div class="preloader">
 <div class="spinner"></div>
-</div>
+</div> -->
 
 
 <div class="top-bar-area">
@@ -98,12 +98,12 @@ Email: <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#335b5
 <li>
 <div class="dropdown language-switcher d-inline-block">
 <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<img src="assets/img/world.png" alt="flag">
+<img src="{{ url_for('static',filename='img/world.png')}}" alt="flag">
 <span>Lang <i class='bx bx-chevron-down'></i></span>
 </button>
 <div class="dropdown-menu">
 <a href="#" class="dropdown-item d-flex align-items-center">
-<img src="assets/img/english.png" class="shadow-sm" alt="flag">
+<img src="{{ url_for('static',filename='assets/img/english.png')}}" class="shadow-sm" alt="flag">
 <span>Français</span>
 </a>
 <a href="#" class="dropdown-item d-flex align-items-center">
