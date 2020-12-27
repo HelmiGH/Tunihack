@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/mediva/default/hospitals.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:29:02 GMT -->
 <head>
 
 <meta charset="utf-8">
@@ -40,10 +39,6 @@
 <link rel="icon" type="image/png" href="{{ url_for('static',filename='img/logo3.png')}}">
 </head>
 <body>
-
-<div class="preloader">
-<div class="spinner"></div>
-</div>
 
 
 <div class="top-bar-area">
@@ -108,7 +103,7 @@
         <div class="container">
         <div class="main-responsive-menu">
         <div class="logo">
-        <a href="index.html">
+        <a href="{{ url_for('home')}}">
         <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image">
         </a>
         </div>
@@ -118,53 +113,53 @@
         <div class="main-navbar">
         <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ url_for('home')}}">
         <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image" width="250px">
         </a>
         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
         
             <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="{{ url_for('home')}}" class="nav-link">
                 Home
                 </a>
             </li>
         
             <li class="nav-item">
-                <a href="hospitals.html" class="nav-link">
+                <a href="{{ url_for('hospitals')}}" class="nav-link">
                 Hospitals
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="needs.html" class="nav-link">
-                achievements
+                <a href="{{ url_for('needs')}}" class="nav-link">
+                Needs
                 </a>
             </li>
         
         
             <li class="nav-item">
-                <a href="achievements.html" class="nav-link">
+                <a href="{{ url_for('achievements')}}" class="nav-link">
                 Achivements
                 </a>
             </li>
         
 
             <li class="nav-item">
-                <a href="my-account.html" class="nav-link">
+                <a href="{{ url_for('my_account')}}" class="nav-link">
                 Profile
                 </a>
                 </li>
         
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
+                    <a href="{{ url_for('contact')}}" class="nav-link">
                     Contact
                     </a>
                     </li>
 </ul>
 <div class="others-options d-flex align-items-center">
     <div class="option-item">
-        <a href="make_donation.html" class="default-btn">Make a Donation</a>
+        <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
  </div>
 <div class="search-box d-inline-block">
 <i class='bx bx-search'></i>
@@ -187,7 +182,7 @@
 <div class="option-inner">
 <div class="others-options d-flex align-items-center">
     <div class="option-item">
-        <a href="make_donation.html" class="default-btn">Make a Donation</a>
+        <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
  </div>
 
 <div class="search-box d-inline-block">
@@ -230,7 +225,7 @@
 <h2>achievements</h2>
 <ul>
 <li>
-<a href="index.html">Home</a>
+<a href="{{ url_for('home')}}">Home</a>
 </li>
 <li>achievements</li>
 </ul>
@@ -263,11 +258,11 @@
     <div class="col-lg-4 col-md-6">
     <div class="single-doctor">
     <div class="doctor-image" style="height:250px">
-    <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/a1.jpg')}}"   alt="image"></a>
+    <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/a1.jpg')}}"   alt="image"></a>
     <a href="#"><i class="flaticon-like"></i></a>
     </div>
     <div class="doctor-content">
-    <h3><a href="hospital-details.html">Hôpital Aziza Othmana</a></h3>
+    <h3><a href="{{ url_for('hospital_details')}}">Hôpital Aziza Othmana</a></h3>
     <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
     <ul class="rating">
     <li><i class='bx bxs-star'></i></li>
@@ -281,7 +276,7 @@
     <li><i class="flaticon-phone-call"></i>71 560 763</li>
     </ul>
     <div class="doctor-btn">
-    <a href="hospital-details.html" class="default-btn" >View Details</a>
+    <a href="{{ url_for('hospital_details')}}" class="default-btn" >View Details</a>
     </div>
     </div>
     </div>
@@ -289,11 +284,11 @@
     <div class="col-lg-4 col-md-6">
     <div class="single-doctor">
     <div class="doctor-image"  style="height:250px">
-    <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f3.jpg')}}" alt="image"></a>
+    <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f3.jpg')}}" alt="image"></a>
     <a href="#"><i class="flaticon-like"></i></a>
     </div>
     <div class="doctor-content">
-    <h3><a href="hospital-details.html">Hôpital Charles Nicolle
+    <h3><a href="{{ url_for('hospital_details')}}">Hôpital Charles Nicolle
     </a></h3>
     <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
     <ul class="rating">
@@ -308,7 +303,7 @@
     <li><i class="flaticon-phone-call"></i>71 560 763</li>
     </ul>
     <div class="doctor-btn">
-        <a href="hospital-details.html" class="default-btn">View Details</a>
+        <a href="{{ url_for('hospital_details')}}" class="default-btn">View Details</a>
     </div>
     </div>
     </div>
@@ -316,11 +311,11 @@
     <div class="col-lg-4 col-md-6">
     <div class="single-doctor">
     <div class="doctor-image" style="height:250px">
-    <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+    <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
     <a href="#"><i class="flaticon-like"></i></a>
     </div>
     <div class="doctor-content">
-    <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+    <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
     <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
     <ul class="rating">
     <li><i class='bx bxs-star'></i></li>
@@ -333,7 +328,7 @@
     <li><i class="flaticon-phone-call"></i>71 560 763</li>
     </ul>
     <div class="doctor-btn">
-        <a href="hospital-details.html" class="default-btn" >View Details</a>
+        <a href="{{ url_for('hospital_details')}}" class="default-btn" >View Details</a>
     </div>
     </div>
     </div>
@@ -341,11 +336,11 @@
     <div class="col-lg-4 col-md-6">
         <div class="single-doctor">
         <div class="doctor-image" style="height:250px">
-        <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+        <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
         <a href="#"><i class="flaticon-like"></i></a>
         </div>
         <div class="doctor-content">
-        <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+        <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
         <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
         <ul class="rating">
         <li><i class='bx bxs-star'></i></li>
@@ -358,7 +353,7 @@
         <li><i class="flaticon-phone-call"></i>71 560 763</li>
         </ul>
         <div class="doctor-btn">
-            <a href="hospital-details.html" class="default-btn">View Details</a>
+            <a href="{{ url_for('hospital_details')}}" class="default-btn">View Details</a>
         </div>
         </div>
         </div>
@@ -366,11 +361,11 @@
         <div class="col-lg-4 col-md-6">
             <div class="single-doctor">
             <div class="doctor-image" style="height:250px">
-            <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+            <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
             <a href="#"><i class="flaticon-like"></i></a>
             </div>
             <div class="doctor-content">
-            <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+            <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
             <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
             <ul class="rating">
             <li><i class='bx bxs-star'></i></li>
@@ -383,7 +378,7 @@
             <li><i class="flaticon-phone-call"></i>71 560 763</li>
             </ul>
             <div class="doctor-btn">
-                <a href="hospital-details.html" class="default-btn">View Details</a>
+                <a href="{{ url_for('hospital_details')}}" class="default-btn">View Details</a>
             </div>
             </div>
             </div>
@@ -391,11 +386,11 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-doctor">
                 <div class="doctor-image" style="height:250px">
-                <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+                <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
                 <a href="#"><i class="flaticon-like"></i></a>
                 </div>
                 <div class="doctor-content">
-                <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+                <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
                 <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
                 <ul class="rating">
                 <li><i class='bx bxs-star'></i></li>
@@ -408,7 +403,7 @@
                 <li><i class="flaticon-phone-call"></i>71 560 763</li>
                 </ul>
                 <div class="doctor-btn">
-                    <a href="hospital-details.html" class="default-btn">View Details</a>
+                    <a href="{{ url_for('hospital_details')}}" class="default-btn">View Details</a>
                 </div>
                 </div>
                 </div>
@@ -444,7 +439,7 @@
 <div class="row">
 <div class="col-lg-3 col-sm-6">
 <div class="single-footer-widget">
-<a href="index.html">
+<a href="{{ url_for('home')}}">
 <img src="{{ url_for('static',filename='img/logo-2.png')}}" alt="image">
 </a>
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
@@ -589,5 +584,4 @@ EnvyTheme
 <script src="assets/js/main.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/mediva/default/hospitals.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:29:02 GMT -->
 </html>

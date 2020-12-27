@@ -41,10 +41,6 @@
 </head>
 <body>
 
-<div class="preloader">
-<div class="spinner"></div>
-</div>
-
 
 <div class="top-bar-area">
     <div class="container">
@@ -98,7 +94,7 @@
     </li>
     </ul>
     </div>
-    </div>
+    </div>²
     </div>
     </div>
 
@@ -108,7 +104,7 @@
         <div class="container">
         <div class="main-responsive-menu">
         <div class="logo">
-        <a href="index.html">
+        <a href="{{ url_for('home')}}">
         <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image">
         </a>
         </div>
@@ -118,53 +114,53 @@
         <div class="main-navbar">
         <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ url_for('home')}}">
         <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image" width="250px">
         </a>
         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
         
             <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="{{ url_for('home')}}" class="nav-link">
                 Home
                 </a>
             </li>
         
             <li class="nav-item">
-                <a href="hospitalss.html" class="nav-link">
+                <a href="{{ url_for('hospitals')}}" class="nav-link">
                 Hospitals
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="needs.html" class="nav-link">
-                achievementsents
+                <a href="{{ url_for('needs')}}" class="nav-link">
+                Needs
                 </a>
             </li>
         
         
             <li class="nav-item">
-                <a href="achievementsents.html" class="nav-link">
+                <a href="{{url_for('achievements')}}" class="nav-link">
                 Achivements
                 </a>
             </li>
         
 
             <li class="nav-item">
-                <a href="my-account.html" class="nav-link">
+                <a href="{{ url_for('my_account')}}" class="nav-link">
                 Profile
                 </a>
                 </li>
         
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
+                    <a href="{{ url_for('contact')}}" class="nav-link">
                     Contact
                     </a>
                     </li>
 </ul>
 <div class="others-options d-flex align-items-center">
     <div class="option-item">
-        <a href="make_donation.html" class="default-btn">Make a Donation</a>
+        <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
  </div>
 <div class="search-box d-inline-block">
 <i class='bx bx-search'></i>
@@ -187,7 +183,7 @@
 <div class="option-inner">
 <div class="others-options d-flex align-items-center">
     <div class="option-item">
-        <a href="make_donation.html" class="default-btn">Make a Donation</a>
+        <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
  </div>
 
 <div class="search-box d-inline-block">
@@ -230,7 +226,7 @@
 <h2>achievementsents</h2>
 <ul>
 <li>
-<a href="index.html">Home</a>
+<a href="{{ url_for('home')}}">Home</a>
 </li>
 <li>achievementsents</li>
 </ul>
@@ -281,8 +277,8 @@
                 </ul>
                 
                 <ul class="confirm-list">
-                    <li><a href="hospitalss-details.html" style="color:#2a8ad8;">View</a></li>
-                <li><a href="make_donation.html" style="color:#2a8ad8;">Donate</a></li>
+                    <li><a href="{{ url_for('services_details')}}" style="color:#2a8ad8;">View</a></li>
+                <li><a href="{{ url_for('make_donation')}}" style="color:#2a8ad8;">Donate</a></li>
                 </ul>
                 </div>
                 </div>
@@ -307,8 +303,8 @@
                     </ul>
                     
                     <ul class="confirm-list">
-                    <li><a href="hospitalss-details.html" style="color:#2a8ad8;">View</a></li>
-                    <li><a href="make_donation.html" style="color:#2a8ad8;">Donate</a></li>
+                    <li><a href="{{ url_for('services_details')}}" style="color:#2a8ad8;">View</a></li>
+                    <li><a href="{{ url_for('make_donation')}}" style="color:#2a8ad8;">Donate</a></li>
                     </ul>
                     </div>
                     </div>
@@ -333,8 +329,8 @@
                         </ul>
                         
                         <ul class="confirm-list">
-                        <li><a href="hospitalss-details.html" style="color:#2a8ad8;">View</a></li>
-                        <li><a href="make_donation.html" style="color:#2a8ad8;">Donate</a></li>
+                        <li><a href="{{ url_for('services_details')}}" style="color:#2a8ad8;">View</a></li>
+                        <li><a href="{{ url_for('make_donation')}}" style="color:#2a8ad8;">Donate</a></li>
                         </ul>
                         </div>
                         </div>
@@ -360,8 +356,8 @@
                             </ul>
                             
                             <ul class="confirm-list">
-                            <li><a href="hospitalss-details.html" style="color:#2a8ad8;" >View</a></li>
-                            <li><a href="make_donation.html" style="color:#2a8ad8;">Donate</a></li>
+                            <li><a href="{{ url_for('services_details')}}" style="color:#2a8ad8;" >View</a></li>
+                            <li><a href="{{ url_for('make_donation')}}" style="color:#2a8ad8;">Donate</a></li>
                             </ul>
                             </div>
                             </div>
@@ -398,7 +394,7 @@
 <div class="row">
 <div class="col-lg-3 col-sm-6">
 <div class="single-footer-widget">
-<a href="index.html">
+<a href="{{ url_for('home')}}">
 <img src="{{ url_for('static',filename='img/logo-2.png')}}" alt="image">
 </a>
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>

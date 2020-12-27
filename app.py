@@ -189,9 +189,60 @@ def home():
 
     return render_template('index.html')
     
-        
+@app.route('/hospitals',methods=['POST','GET'])
+def hospitals():      
 
-#     return render_template('sign_up.html', form=form,dupl_email=dupl_email)
+    return render_template('hospitals.html')
+
+@app.route('/services_details',methods=['POST','GET'])
+def services_details():      
+
+    return render_template('services-details.html')
+
+@app.route('/profile',methods=['POST','GET'])
+def profile():      
+
+    return render_template('profile.html')
+
+@app.route('/needs',methods=['POST','GET'])
+def needs():      
+
+    return render_template('needs.html')
+
+@app.route('/my_account',methods=['POST','GET'])
+def my_account():      
+
+    return render_template('my-account.html')
+
+@app.route('/make_donation',methods=['POST','GET'])
+def make_donation():      
+
+    return render_template('make_donation.html')
+
+@app.route('/hospital_details',methods=['POST','GET'])
+def hospital_details():      
+
+    return render_template('hospital-details.html')
+
+@app.route('/contact',methods=['POST','GET'])
+def contact():      
+
+    return render_template('contact.html')
+
+@app.route('/change_password',methods=['POST','GET'])
+def change_password():      
+
+    return render_template('change-password.html')
+
+@app.route('/change_password',methods=['POST','GET'])
+def achievements():      
+
+    return render_template('achievements.html')
+
+@app.route('/invoices',methods=['POST','GET'])
+def invoices():      
+
+    return render_template('invoices.html')
   
 # def rate_mean(rates):
 #     return sum(rates)/len(rates)

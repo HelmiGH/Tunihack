@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/mediva/default/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:58 GMT -->
+<!-- Mirrored from templates.envytheme.com/mediva/default/{{ url_for('my_account')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:58 GMT -->
 <head>
 
 <meta charset="utf-8">
@@ -41,9 +41,6 @@
 </head>
 <body>
 
-<div class="preloader">
-<div class="spinner"></div>
-</div>
 
 
 <div class="top-bar-area">
@@ -108,7 +105,7 @@
         <div class="container">
         <div class="main-responsive-menu">
         <div class="logo">
-        <a href="index.html">
+        <a href="{{ url_for('home')}}">
         <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image">
         </a>
         </div>
@@ -118,53 +115,53 @@
         <div class="main-navbar">
         <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ url_for('home')}}">
         <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image" width="250px">
         </a>
         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
         
             <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="{{ url_for('home')}}" class="nav-link">
                 Home
                 </a>
             </li>
         
             <li class="nav-item">
-                <a href="hospitals.html" class="nav-link">
+                <a href="{{ url_for('hospitals')}}" class="nav-link">
                 Hospitals
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="needs.html" class="nav-link">
-                achievements
+                <a href="{{ url_for('needs')}}" class="nav-link">
+                Needs
                 </a>
             </li>
         
         
             <li class="nav-item">
-                <a href="achievements.html" class="nav-link">
+                <a href="{{ url_for('achievements')}}" class="nav-link">
                 Achivements
                 </a>
             </li>
  
         
             <li class="nav-item">
-                <a href="my-account.html" class="nav-link">
+                <a href="{{ url_for('my_account')}}" class="nav-link">
                 Profile
                 </a>
                 </li>
         
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
+                    <a href="{{ url_for('contact')}}" class="nav-link">
                     Contact
                     </a>
                     </li>
 </ul>
 <div class="others-options d-flex align-items-center">
     <div class="option-item">
-        <a href="make_donation.html" class="default-btn">Make a Donation</a>
+        <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
  </div>
 
 <div class="search-box d-inline-block">
@@ -207,7 +204,7 @@
 <h2>My Profile</h2>
 <ul>
 <li>
-<a href="index.html">Home</a>
+<a href="{{ url_for('home')}}">Home</a>
 </li>
 <li>My Profile</li>
 </ul>
@@ -224,7 +221,7 @@
 <div class="col-lg-6 col-md-12">
 <div class="login-form mb-30">
 <h2>Login</h2>
-<form action="profile.html">
+<form action="{{ url_for('profile')}}">
 <div class="form-group">
 <label>Username</label>
 <input type="text" class="form-control" placeholder="Username">
@@ -308,7 +305,7 @@
 <div class="row">
 <div class="col-lg-3 col-sm-6">
 <div class="single-footer-widget">
-<a href="index.html">
+<a href="{{ url_for('home')}}">
 <img src="{{ url_for('static',filename='img/logo-2.png')}}" alt="image">
 </a>
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
@@ -453,5 +450,5 @@ EnvyTheme
 <script src="assets/js/main.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/mediva/default/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:58 GMT -->
+<!-- Mirrored from templates.envytheme.com/mediva/default/{{ url_for('my_account')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:58 GMT -->
 </html>

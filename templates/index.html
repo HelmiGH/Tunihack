@@ -1,56 +1,23 @@
 <!doctype html>
 <html lang="zxx">
 
-<!-- Mirrored from templates.envytheme.com/mediva/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:24 GMT -->
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/animate.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.min.css')}}">
-
-
-<!-- <link rel="stylesheet" href="assets/css/meanmenu.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/meanmenu.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/boxicons.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/boxicons.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/flaticon.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/odometer.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/odometer.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/owl.carousel.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/magnific-popup.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/nice-select.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/nice-select.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/datetimepicker.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/datetimepicker.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/month.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/month.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/imagelightbox.min.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/imagelightbox.min.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
-
-<!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
 <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.min.css')}}">
 
 <title>MedicaTun</title>
@@ -59,9 +26,6 @@
 </head>
 <body>
 
-<!-- <div class="preloader">
-<div class="spinner"></div>
-</div> -->
 
 
 <div class="top-bar-area">
@@ -126,7 +90,7 @@ Email: <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#335b5
 <div class="container">
 <div class="main-responsive-menu">
 <div class="logo">
-<a href="index.html">
+<a href="{{ url_for('home')}}">
 <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image">
 </a>
 </div>
@@ -136,45 +100,45 @@ Email: <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#335b5
 <div class="main-navbar">
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light">
-<a class="navbar-brand" href="index.html">
+<a class="navbar-brand" href="{{ url_for('home')}}">
 <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image" width="250px">
 </a>
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 <ul class="navbar-nav m-auto">
 
     <li class="nav-item">
-        <a href="index.html" class="nav-link">
+        <a href="{{ url_for('home')}}" class="nav-link">
         Home
         </a>
     </li>
 
     <li class="nav-item">
-        <a href="hospitals.html" class="nav-link">
+        <a href="{{ url_for('hospitals')}}" class="nav-link">
         Hospitals
         </a>
     </li>
 
     <li class="nav-item">
-        <a href="needs.html" class="nav-link">
-        achievements
+        <a href="{{ url_for('needs')}}" class="nav-link">
+        Needs
         </a>
     </li>
 
 
     <li class="nav-item">
-        <a href="achievements.html" class="nav-link">
+        <a href="{{ url_for('achievements')}}" class="nav-link">
         Achivements
         </a>
     </li>
 
     <li class="nav-item">
-        <a href="my-account.html" class="nav-link">
+        <a href="{{ url_for('my_account')}}" class="nav-link">
         Profile
         </a>
         </li>
 
         <li class="nav-item">
-            <a href="contact.html" class="nav-link">
+            <a href="{{ url_for('contact')}}" class="nav-link">
             Contact
             </a>
             </li>
@@ -186,7 +150,7 @@ Home
 </a>
 <ul class="dropdown-menu">
 <li class="nav-item">
-<a href="index.html" class="nav-link active">
+<a href="{{ url_for('home')}}" class="nav-link active">
 Home One
 </a>
 </li>
@@ -250,7 +214,7 @@ Reviews
 </a>
 </li>
 <li class="nav-item">
-<a href="change-password.html" class="nav-link">
+<a href="{{ url_for('change_password')}}" class="nav-link">
 Change Password
 </a>
 </li>
@@ -267,7 +231,7 @@ Doctors
 </a>
 </li>
 <li class="nav-item">
-<a href="hospital-details.html" class="nav-link">
+<a href="{{ url_for('hospital_details')}}" class="nav-link">
 Doctors Details
 </a>
 </li>
@@ -300,7 +264,7 @@ Gallery
 </a>
 </li>
 <li class="nav-item">
-<a href="my-account.html" class="nav-link">
+<a href="{{ url_for('my_account')}}" class="nav-link">
 My Account
 </a>
 </li>
@@ -381,7 +345,7 @@ Submit Review
 </a>
 </li>
 <li class="nav-item">
-<a href="make_donation.html" class="nav-link">
+<a href="{{ url_for('make_donation')}}" class="nav-link">
 Book Appointment
 </a>
 </li>
@@ -399,7 +363,7 @@ hospitals
 </a>
 <ul class="dropdown-menu">
 <li class="nav-item">
-<a href="hospitals.html" class="nav-link">
+<a href="{{ url_for('hospitals')}}" class="nav-link">
 hospitals
 </a>
 </li>
@@ -429,13 +393,13 @@ Blog Details
 </ul>
 </li>
 <li class="nav-item">
-<a href="contact.html" class="nav-link">
+<a href="{{ url_for('contact')}}" class="nav-link">
 Contact
 </a>
 </li>-->
 <div class="others-options d-flex align-items-center">
     <div class="option-item">
-    <a href="make_donation.html" class="default-btn">Make a Donation</a>
+    <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
     </div>
     
     </div>
@@ -457,7 +421,7 @@ Contact
 <div class="option-inner">
 <div class="others-options d-flex align-items-center">
 <div class="option-item">
-        <a href="make_donation.html" class="default-btn">Make a Donation</a>
+        <a href="{{ url_for('make_donation')}}" class="default-btn">Make a Donation</a>
  </div>
 </div>
 </div>
@@ -494,119 +458,7 @@ Contact
 </div>
 </div>
 </div>
-
-<!--
-<section class="categories-area pt-100 pb-100">
-<div class="container">
-<div class="section-title">
-<h2>Specialized Doctors Categories</h2>
-<div class="bar"></div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco labor.</p>
-</div>
-<div class="categories-slider owl-carousel owl-theme">
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-tooth"></i>
-</div>
-<h3>
-<a href="#">Dentist</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-kidneys"></i>
-</div>
-<h3>
-<a href="#">Urology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-thinking"></i>
-</div>
-<h3>
-<a href="#">Neurology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-caduceus-symbol"></i>
-</div>
-<h3>
-<a href="#">Gastrology</a>
-</h3>
-</div>
- <div class="categories-item">
-<div class="icon">
-<i class="flaticon-heart"></i>
-</div>
-<h3>
-<a href="#">Cardiology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-bones"></i>
-</div>
-<h3>
-<a href="#">Orthopedic</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-tooth"></i>
-</div>
-<h3>
-<a href="#">Dentist</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-kidneys"></i>
-</div>
-<h3>
-<a href="#">Urology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-thinking"></i>
-</div>
-<h3>
-<a href="#">Neurology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-caduceus-symbol"></i>
-</div>
-<h3>
-<a href="#">Gastrology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-heart"></i>
-</div>
-<h3>
-<a href="#">Cardiology</a>
-</h3>
-</div>
-<div class="categories-item">
-<div class="icon">
-<i class="flaticon-bones"></i>
-</div>
-<h3>
-<a href="#">Orthopedic</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="categories-shape">
-<img src="assets/img/categories-shape-1.png" alt="image">
-</div>
-</section>
--->
+=
 
 <section class="overview-area pb-100 pt-100">
     <div class="container">
@@ -625,7 +477,7 @@ Contact
          it be the addition of patient 
         beds, giving the laboratory a facelift, or installing diagnostic equipment.</p>
     <div class="overview-btn">
-    <a href="#" class="default-btn">Contact Us</a>
+    <a href="{{ url_for('contact')}}" class="default-btn">Contact Us</a>
     </div>
     </div>
     </div>
@@ -715,11 +567,11 @@ Scientific skills For Getting A Better Result
 <div class="col-lg-4 col-md-6">
 <div class="single-doctor">
 <div class="doctor-image" style="height:250px">
-<a href="hospital-details.html"><img src="{{ url_for('static',filename='img/a1.jpg')}}"   alt="image"></a>
+<a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/a1.jpg')}}"   alt="image"></a>
 <a href="#"><i class="flaticon-like"></i></a>
 </div>
 <div class="doctor-content">
-<h3><a href="hospital-details.html">Hôpital Aziza Othmana</a></h3>
+<h3><a href="{{ url_for('hospital_details')}}">Hôpital Aziza Othmana</a></h3>
 <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
 <ul class="rating">
 <li><i class='bx bxs-star'></i></li>
@@ -733,8 +585,8 @@ Scientific skills For Getting A Better Result
 <li><i class="flaticon-phone-call"></i>71 560 763</li>
 </ul>
 <div class="doctor-btn">
-<a href="hospital-details.html" class="default-btn">View Details</a>
-<a href="make_donation.html" class="optional-btn">Make donation</a>
+<a href="{{ url_for('services_details')}}" class="default-btn">View Details</a>
+<a href="{{ url_for('make_donation')}}" class="optional-btn">Make donation</a>
 </div>
 </div>
 </div>
@@ -742,11 +594,11 @@ Scientific skills For Getting A Better Result
 <div class="col-lg-4 col-md-6">
 <div class="single-doctor">
 <div class="doctor-image"  style="height:250px">
-<a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f3.jpg')}}" alt="image"></a>
+<a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f3.jpg')}}" alt="image"></a>
 <a href="#"><i class="flaticon-like"></i></a>
 </div>
 <div class="doctor-content">
-<h3><a href="hospital-details.html">Hôpital Charles Nicolle
+<h3><a href="{{ url_for('hospital_details')}}">Hôpital Charles Nicolle
 </a></h3>
 <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
 <ul class="rating">
@@ -761,8 +613,8 @@ Scientific skills For Getting A Better Result
 <li><i class="flaticon-phone-call"></i>71 560 763</li>
 </ul>
 <div class="doctor-btn">
-    <a href="hospital-details.html" class="default-btn">View Details</a>
-    <a href="make_donation.html" class="optional-btn">Make donation</a>
+    <a href="{{ url_for('services_details')}}" class="default-btn">View Details</a>
+    <a href="{{ url_for('make_donation')}}" class="optional-btn">Make donation</a>
 </div>
 </div>
 </div>
@@ -770,11 +622,11 @@ Scientific skills For Getting A Better Result
 <div class="col-lg-4 col-md-6">
 <div class="single-doctor">
 <div class="doctor-image" style="height:250px">
-<a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+<a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
 <a href="#"><i class="flaticon-like"></i></a>
 </div>
 <div class="doctor-content">
-<h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+<h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
 <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
 <ul class="rating">
 <li><i class='bx bxs-star'></i></li>
@@ -787,8 +639,8 @@ Scientific skills For Getting A Better Result
 <li><i class="flaticon-phone-call"></i>71 560 763</li>
 </ul>
 <div class="doctor-btn">
-    <a href="hospital-details.html" class="default-btn">View Details</a>
-    <a href="make_donation.html" class="optional-btn">Make donation</a>
+    <a href="{{ url_for('services_details')}}" class="default-btn">View Details</a>
+    <a href="{{ url_for('make_donation')}}" class="optional-btn">Make donation</a>
 </div>
 </div>
 </div>
@@ -796,11 +648,11 @@ Scientific skills For Getting A Better Result
 <div class="col-lg-4 col-md-6">
     <div class="single-doctor">
     <div class="doctor-image" style="height:250px">
-    <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+    <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
     <a href="#"><i class="flaticon-like"></i></a>
     </div>
     <div class="doctor-content">
-    <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+    <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
     <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
     <ul class="rating">
     <li><i class='bx bxs-star'></i></li>
@@ -813,8 +665,8 @@ Scientific skills For Getting A Better Result
     <li><i class="flaticon-phone-call"></i>71 560 763</li>
     </ul>
     <div class="doctor-btn">
-        <a href="hospital-details.html" class="default-btn">View Details</a>
-        <a href="make_donation.html" class="optional-btn">Make donation</a>
+        <a href="{{ url_for('hospital_details')}}" class="default-btn">View Details</a>
+        <a href="{{ url_for('make_donation')}}" class="optional-btn">Make donation</a>
     </div>
     </div>
     </div>
@@ -822,11 +674,11 @@ Scientific skills For Getting A Better Result
     <div class="col-lg-4 col-md-6">
         <div class="single-doctor">
         <div class="doctor-image" style="height:250px">
-        <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+        <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
         <a href="#"><i class="flaticon-like"></i></a>
         </div>
         <div class="doctor-content">
-        <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+        <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
         <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
         <ul class="rating">
         <li><i class='bx bxs-star'></i></li>
@@ -839,8 +691,8 @@ Scientific skills For Getting A Better Result
         <li><i class="flaticon-phone-call"></i>71 560 763</li>
         </ul>
         <div class="doctor-btn">
-            <a href="hospital-details.html" class="default-btn">View Details</a>
-            <a href="make_donation.html" class="optional-btn">Make donation</a>
+            <a href="{{ url_for('services_details')}}" class="default-btn">View Details</a>
+            <a href="{{ url_for('make_donation')}}" class="optional-btn">Make donation</a>
         </div>
         </div>
         </div>
@@ -848,11 +700,11 @@ Scientific skills For Getting A Better Result
         <div class="col-lg-4 col-md-6">
             <div class="single-doctor">
             <div class="doctor-image" style="height:250px">
-            <a href="hospital-details.html"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
+            <a href="{{ url_for('hospital_details')}}"><img src="{{ url_for('static',filename='img/f5.jpg')}}" alt="image"></a>
             <a href="#"><i class="flaticon-like"></i></a>
             </div>
             <div class="doctor-content">
-            <h3><a href="hospital-details.html">Hôpital Habib Thameur</a></h3>
+            <h3><a href="{{ url_for('hospital_details')}}">Hôpital Habib Thameur</a></h3>
             <p class="designation">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation labor.</p>
             <ul class="rating">
             <li><i class='bx bxs-star'></i></li>
@@ -865,8 +717,8 @@ Scientific skills For Getting A Better Result
             <li><i class="flaticon-phone-call"></i>71 560 763</li>
             </ul>
             <div class="doctor-btn">
-                <a href="hospital-details.html" class="default-btn">View Details</a>
-                <a href="make_donation.html" class="optional-btn">Make donation</a>
+                <a href="{{ url_for('services_details')}}" class="default-btn">View Details</a>
+                <a href="{{ url_for('make_donation')}}" class="optional-btn">Make donation</a>
             </div>
             </div>
             </div>
@@ -1007,7 +859,7 @@ Scientific skills For Getting A Better Result
 <div class="row">
 <div class="col-lg-3 col-sm-6">
 <div class="single-footer-widget">
-<a href="index.html">
+<a href="{{ url_for('home')}}">
 <img src="{{ url_for('static',filename='img/logo-2.png')}}" alt="image">
 </a>
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
@@ -1139,5 +991,5 @@ Scientific skills For Getting A Better Result
 <script src="assets/js/main.js"></script>
 </body>
 
-<!-- Mirrored from templates.envytheme.com/mediva/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:29 GMT -->
+<!-- Mirrored from templates.envytheme.com/mediva/default/{{ url_for('home')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Dec 2020 14:28:29 GMT -->
 </html>
