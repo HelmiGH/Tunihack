@@ -38,7 +38,7 @@ global hh
 #     if current_user.is_authenticated:
 #         if current_user.type=="admin":
 #             users=User.query.count()-1
-#             projects= Project.query.count()
+#             achievements= Project.query.count()
 #             contrib=Project.query.filter(Project.annotation!="").count()
 #             satisfaction=Project.query.filter(Project.rate != 0).with_entities(func.avg(Project.rate).label('average')).first()
 #             # sql=text('Select user.firstname, count(annotation) as nb_count from project,user where user.id=project.owner and project.annotation<>'' group by owner order by nb_count desc Limit 6')
@@ -51,7 +51,7 @@ global hh
                 
 #             t_contrib.sort(reverse=True)
 #             a=len(t_contrib)
-#             return render_template('dashboard.html',users=users,projects=projects,contrib=contrib,satis=int(satisfaction[0]),t_contrib=t_contrib,a=a,msg="home")
+#             return render_template('dashboard.html',users=users,achievements=achievements,contrib=contrib,satis=int(satisfaction[0]),t_contrib=t_contrib,a=a,msg="home")
 #         else:
 #             login="Log Out"
 #             link="logout"
@@ -138,7 +138,7 @@ class Hospital(UserMixin,db.Model):
     total_donnations=db.Column(db.Float,default=0)
     description=db.Column(db.Text(),nullable=False)
 
-class Projects(UserMixin,db.Model):
+class achievements(UserMixin,db.Model):
     id = db.Column(db.Integer, primary_key=True)
     hospital_id = db.Column(db.Integer, nullable=False)
     creation_date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
@@ -251,8 +251,8 @@ def home():
 #     premium=current_user.premium
 #     print('premium ou nn :', premium)
 #     if current_user.type != "admin":
-#         Projects= Project.query.filter_by(owner=current_user.id).all()
-#         nb_projects=Project.query.filter_by(owner=current_user.id).count()
+#         achievements= Project.query.filter_by(owner=current_user.id).all()
+#         nb_achievements=Project.query.filter_by(owner=current_user.id).count()
 #         rate=Project.query.with_entities(func.avg(Project.rate).label('rate')).filter(Project.owner==current_user.id).first()
 #         annot=Project.query.with_entities(Project.annotation.label('annotation')).filter(Project.owner==current_user.id).all()
 #         if rate[0] == None:
@@ -299,10 +299,10 @@ def home():
 #                 flash('Your password is too small. Try again!', 'danger')
 #                 return redirect(url_for('profile')) 
         
-#         return render_template('profile.html', form_g=form_g,form_s=form_s,projects=Projects,nb_projects=nb_projects,rate_mean=rate_final,contrib=contrib,premium=premium)   
+#         return render_template('profile.html', form_g=form_g,form_s=form_s,achievements=achievements,nb_achievements=nb_achievements,rate_mean=rate_final,contrib=contrib,premium=premium)   
 #     else:
 #             users=User.query.count()-1
-#             projects= Project.query.count()
+#             achievements= Project.query.count()
 #             contrib=Project.query.filter(Project.annotation!="").count()
 #             satisfaction=Project.query.filter(Project.rate != 0).with_entities(func.avg(Project.rate).label('average')).first()
 #             contributers= Project.query.join(User,User.id==Project.owner).with_entities(User.firstname.label('name1') ,User.lastname.label('name2'),func.count(Project.annotation).label('nb_annot')).filter(Project.annotation!="").group_by(Project.owner).all()
@@ -313,7 +313,7 @@ def home():
                 
 #             t_contrib.sort(reverse=True)
 #             a=len(t_contrib)
-#             return render_template('dashboard.html',users=users,projects=projects,contrib=contrib,satis=int(satisfaction[0]),t_contrib=t_contrib,a=a,msg="profile")
+#             return render_template('dashboard.html',users=users,achievements=achievements,contrib=contrib,satis=int(satisfaction[0]),t_contrib=t_contrib,a=a,msg="profile")
         
 
 # @app.route('/rate',methods=['POST'] )
@@ -357,7 +357,7 @@ def home():
 # @login_required
 # def dashboard():
 #     users=User.query.count()-1
-#     projects= Project.query.count()
+#     achievements= Project.query.count()
 #     contrib=Project.query.filter(Project.annotation!="").count()
 #     satisfaction=Project.query.filter(Project.rate != 0).with_entities(func.avg(Project.rate).label('average')).first()
 #     # sql=text('Select user.firstname, count(annotation) as nb_count from project,user where user.id=project.owner and project.annotation<>'' group by owner order by nb_count desc Limit 6')
@@ -371,26 +371,26 @@ def home():
 #     t_contrib.sort(reverse=True)
 #     a=len(t_contrib)
         
-#     return render_template('dashboard.html',users=users,projects=projects,contrib=contrib,satis=int(satisfaction[0]),t_contrib=t_contrib,a=a,msg="oui")
+#     return render_template('dashboard.html',users=users,achievements=achievements,contrib=contrib,satis=int(satisfaction[0]),t_contrib=t_contrib,a=a,msg="oui")
 
-# @app.route('/projects',methods=['POST','GET'])
+# @app.route('/achievements',methods=['POST','GET'])
 # @login_required
-# def projects():
-#     Projects= Project.query.join(User, User.id==Project.owner).add_columns(Project.id, User.firstname,User.lastname,Project.input,Project.creation_date,Project.rate,Project.annotation).all()
-#     return render_template('projects.html',projects=Projects)
+# def achievements():
+#     achievements= Project.query.join(User, User.id==Project.owner).add_columns(Project.id, User.firstname,User.lastname,Project.input,Project.creation_date,Project.rate,Project.annotation).all()
+#     return render_template('achievements.html',achievements=achievements)
 
 # @app.route('/users',methods=['POST','GET'])
 # @login_required
 # def users():
 #     # contrib=Project.query.filter(Project.annotation!="").with_entities(Project.owner, func.count(Project.id).label('cont')).group_by(Project.owner).all()
-#     # nb_projects=Project.query.with_entities(Project.owner, func.count(Project.id).label('cont')).group_by(Project.owner).all()
+#     # nb_achievements=Project.query.with_entities(Project.owner, func.count(Project.id).label('cont')).group_by(Project.owner).all()
 #     Users= User.query.all()
 
 #     infos=list()
 #     for user in Users:
-#         nb_projects=0
+#         nb_achievements=0
 #         if (Project.query.filter(Project.owner==user.id).count()!=0):
-#             nb_projects=Project.query.filter(Project.owner==user.id).count()
+#             nb_achievements=Project.query.filter(Project.owner==user.id).count()
 #         contrib=0
 
 #         if (Project.query.filter(Project.owner==user.id,Project.annotation!="").count()!=0):
@@ -406,7 +406,7 @@ def home():
         
 #         print("aaaaaaaaaatiiiis",type(satis))
 #         #float(str(satis).strip('(').strip(')').strip(',').split('.')[0])
-#         infos.append([user.id,user.firstname,user.lastname,user.email,nb_projects,contrib,float(str(satis).strip('(').strip("Decimal('").strip(')').strip(',').split('.')[0])])
+#         infos.append([user.id,user.firstname,user.lastname,user.email,nb_achievements,contrib,float(str(satis).strip('(').strip("Decimal('").strip(')').strip(',').split('.')[0])])
             
 
 #     return render_template('Users.html',infos=infos)
