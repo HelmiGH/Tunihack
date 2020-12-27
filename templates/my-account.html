@@ -7,37 +7,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/animate.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/meanmenu.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/meanmenu.css')}}">
 
-<link rel="stylesheet" href="assets/css/boxicons.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/boxicons.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css')}}">
 
-<link rel="stylesheet" href="assets/css/odometer.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/odometer.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/nice-select.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/nice-select.css')}}">
 
-<link rel="stylesheet" href="assets/css/datetimepicker.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/datetimepicker.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/month.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/month.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/imagelightbox.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/imagelightbox.min.css')}}">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
 
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css')}}">
 <title>Mediva - Specialist Doctors & Chambers HTML Template</title>
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="icon" type="image/png" href="{{ url_for('static',filename='img/favicon.png')}}">
 </head>
 <body>
 
@@ -80,16 +80,16 @@
     <li>
     <div class="dropdown language-switcher d-inline-block">
     <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <img src="assets/img/world.png" alt="flag">
+    <img src="{{ url_for('static',filename='img/world.png')}}" alt="flag">
     <span>Lang <i class='bx bx-chevron-down'></i></span>
     </button>
     <div class="dropdown-menu">
     <a href="#" class="dropdown-item d-flex align-items-center">
-    <img src="assets/img/english.png" class="shadow-sm" alt="flag">
+    <img src="{{ url_for('static',filename='img/english.png')}}" class="shadow-sm" alt="flag">
     <span>Français</span>
     </a>
     <a href="#" class="dropdown-item d-flex align-items-center">
-    <img src="assets/img/arab.png" class="shadow-sm" alt="flag">
+    <img src="{{ url_for('static',filename='img/arab.png')}}" class="shadow-sm" alt="flag">
     <span>العربيّة</span>
     </a>
     </a>
@@ -109,7 +109,7 @@
         <div class="main-responsive-menu">
         <div class="logo">
         <a href="index.html">
-        <img src="assets/img/logo2.png" alt="image">
+        <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image">
         </a>
         </div>
         </div>
@@ -119,7 +119,7 @@
         <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
         <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo2.png" alt="image" width="250px">
+        <img src="{{ url_for('static',filename='img/logo2.png')}}" alt="image" width="250px">
         </a>
         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
@@ -309,7 +309,7 @@
 <div class="col-lg-3 col-sm-6">
 <div class="single-footer-widget">
 <a href="index.html">
-<img src="assets/img/logo-2.png" alt="image">
+<img src="{{ url_for('static',filename='img/logo-2.png')}}" alt="image">
 </a>
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 <ul class="footer-social">
